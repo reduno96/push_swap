@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_free_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/24 17:18:21 by rel-mora         ###   ########.fr       */
+/*   Created: 2024/03/24 16:40:15 by rel-mora          #+#    #+#             */
+/*   Updated: 2024/03/24 17:11:49 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
-{
-	t_stack *stack_a;
 
-	stack_a = NULL;
-	if (argc > 1)
+void	ft_free_stack2(t_stack *stack)
+{
+	t_stack	*tmp;
+
+	while (stack != NULL)
 	{
-		add_nums_to_stack(&stack_a, argc, argv);
-		printf("stack: %d\n", stack_a->content);
+		tmp = stack;
+		stack = stack->next;
+		free(tmp);
 	}
 }
+
+void	ft_free_split(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
