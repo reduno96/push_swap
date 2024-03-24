@@ -1,11 +1,13 @@
 SRC=push_swap.c \
 	add_nums_to_stack.c \
+	ft_error.c \
+
 
 OBJS=${SRC:.c=.o}
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
 
-NAME=push.a
+NAME=push
 LIBFT=libft.a
 
 RM=rm -rf
@@ -13,7 +15,7 @@ ARCH= ar -rcs
 
 all: ${LIBFT} ${NAME} 
 ${NAME}: ${OBJS}
-	${ARCH} ${NAME} ${OBJS}
+	${CC} ${CFLAGS} ${OBJS} -o ${NAME} 
 ${LIBFT}:
 	make -C libft
 clean:
