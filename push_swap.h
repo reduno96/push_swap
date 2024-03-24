@@ -13,7 +13,7 @@ typedef struct s_stack
 	struct s_stack	*prev;
 }					t_stack;
 
-void				*add_nums_to_stack(t_stack *stack_a, int argc, char **argv);
+t_stack				*add_nums_to_stack(int argc, char **argv);
 int					ft_check_duplicate(t_stack *stack_a);
 int					ft_check_num(char *str);
 void				ft_free_stack2(t_stack *stack);

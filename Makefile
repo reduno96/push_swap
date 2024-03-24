@@ -18,7 +18,7 @@ ARCH= ar -rcs
 
 all: ${LIBFT} ${NAME} 
 
-${NAME}: ${OBJS}
+${NAME}: ${OBJS} push_swap.h
 	${CC} ${CFLAGS} ${OBJS} ${LIBFT} -o ${NAME} 
 
 ${LIBFT}:
