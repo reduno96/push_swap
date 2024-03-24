@@ -6,11 +6,16 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/24 22:12:12 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:24:56 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_print_int(int n)
+{
+	printf("%d\n", n);
+}
 
 int	main(int argc, char **argv)
 {
@@ -19,7 +24,9 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		stack_a = add_nums_to_stack(argc, argv);
-		printf("stack: %d\n", stack_a->content);
-		ft_free_stack2(stack_a); // Free stack_a after you're done using it
+		ft_iter_node(stack_a, ft_print_int);
+		// Print the content of stack_a
+		ft_free_stack2(stack_a);
+		// Free stack_a after you're done using it
 	}
 }

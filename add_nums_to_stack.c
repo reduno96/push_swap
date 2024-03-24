@@ -6,18 +6,18 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:10:03 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/24 22:12:40 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:23:25 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*add_nums_to_stack( int argc, char **argv)
+t_stack	*add_nums_to_stack(int argc, char **argv)
 {
 	int		i;
 	int		j;
 	char	**strs;
-	t_stack *stack_a;
+	t_stack	*stack_a;
 
 	stack_a = NULL;
 	i = 1;
@@ -38,5 +38,5 @@ t_stack	*add_nums_to_stack( int argc, char **argv)
 			free(strs);
 		}
 	}
-	return (ft_check_duplicate(stack_a),  stack_a);
+	return (ft_check_duplicate(stack_a), stack_a);
 }
