@@ -4,6 +4,7 @@ SRC=push_swap.c \
 	ft_free_utils.c \
 	ft_nodes_utlis.c\
 	ft_error.c \
+	ft_rules_utils.c \
 
 
 OBJS=${SRC:.c=.o}
@@ -16,10 +17,10 @@ LIBFT = ./libft/libft.a
 RM=rm -rf
 ARCH= ar -rcs
 
-all: ${LIBFT} ${NAME} 
+all: ${LIBFT} ${NAME}
 
 ${NAME}: ${OBJS} push_swap.h
-	${CC} ${CFLAGS} ${OBJS} ${LIBFT} -o ${NAME} 
+	${CC} ${CFLAGS} ${OBJS} ${LIBFT} -o ${NAME}
 
 ${LIBFT}:
 	make -C libft
