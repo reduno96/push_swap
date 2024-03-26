@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   add_nums_to_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:10:03 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/24 22:23:25 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/26 21:38:48 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 
 t_stack	*add_nums_to_stack(int argc, char **argv)
 {
@@ -26,6 +27,8 @@ t_stack	*add_nums_to_stack(int argc, char **argv)
 		while (i < argc)
 		{
 			strs = ft_split(argv[i++], ' ');
+			if (!*strs)
+				return(ft_error(stack_a),NULL);
 			j = 0;
 			while (strs[j])
 			{

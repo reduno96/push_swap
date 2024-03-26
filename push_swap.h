@@ -32,7 +32,10 @@ t_stack				*ft_new(int content);
 void				ft_add(t_stack **stack, t_stack *new_node);
 int					ft_toi(const char *str, t_stack *stack_a);
 
-void				ft_swap(t_stack *stack_a);
+void				ft_swap(t_stack **stack_a);
+void				ft_rotate(t_stack **stack);
+
 void				ft_swap_a_b(t_stack *stack_a, t_stack *stack_b);
-void				ft_push_b(t_stack *stack_a, t_stack *stack_b);
+void				ft_push_a(t_stack **stack_a, t_stack **stack_b);
+void				ft_push_b(t_stack **stack_a, t_stack **stack_b);
 #endif
