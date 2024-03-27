@@ -1,7 +1,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdio.h>
+# include <stdio.h>
 
 /*
 delete
@@ -34,8 +34,8 @@ int					ft_toi(const char *str, t_stack *stack_a);
 
 void				ft_swap(t_stack **stack_a);
 void				ft_rotate(t_stack **stack);
-
+void				ft_reverse_rotate(t_stack **stack_a);
 void				ft_swap_a_b(t_stack *stack_a, t_stack *stack_b);
 void				ft_push_a(t_stack **stack_a, t_stack **stack_b);
-void				ft_push_b(t_stack **stack_a, t_stack **stack_b);
+void				ft_push(t_stack **stack_a, t_stack **stack_b);
 #endif
