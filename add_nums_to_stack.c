@@ -3,43 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   add_nums_to_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:10:03 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/26 21:38:48 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/31 13:24:50 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-t_stack	*add_nums_to_stack(int argc, char **argv)
+void	add_nums_to_stack(t_stack **stack_a, int argc, char **argv)
 {
-	int		i;
-	int		j;
+	t_var	idx;
 	char	**strs;
-	t_stack	*stack_a;
 
-	stack_a = NULL;
-	i = 1;
+	idx.i = 1;
 	if (argc > 1)
 	{
-		while (i < argc)
+		while (idx.i < argc)
 		{
-			strs = ft_split(argv[i++], ' ');
+			strs = ft_split(argv[idx.i++], ' ');
 			if (!*strs)
-				return(ft_error(stack_a),NULL);
-			j = 0;
-			while (strs[j])
+				ft_error(*stack_a);
+			idx.j = 0;
+			while (strs[idx.j])
 			{
-				if (ft_check_num(strs[j]) == 1)
-					ft_add(&stack_a, ft_new(ft_toi(strs[j], stack_a)));
+				if (ft_check_num(strs[idx.j]) == 1)
+					ft_add(stack_a, ft_new(ft_toi(strs[idx.j], *stack_a)));
 				else
-					ft_error(stack_a);
-				free(strs[j++]);
+					ft_error(*stack_a);
+				free(strs[idx.j++]);
 			}
 			free(strs);
 		}
+		ft_check_duplicate(*stack_a);
 	}
-	return (ft_check_duplicate(stack_a), stack_a);
 }

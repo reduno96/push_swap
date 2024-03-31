@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/27 12:05:01 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/31 13:25:00 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,14 @@ void	ft_print_int(int n)
 
 int	main(int argc, char **argv)
 {
-	// t_stack *stack_a;
 	t_stack *stack_a;
-
-	stack_a = NULL;
 	t_stack *stack_b;
 
+	stack_a = NULL;
 	stack_b = NULL;
 	if (argc > 1)
 	{
-		stack_a = add_nums_to_stack(argc, argv);
+		add_nums_to_stack(&stack_a, argc, argv);
 		printf("swap_________________________\n");
 		ft_swap(&stack_a);
 		ft_iter_node(stack_a, ft_print_int);

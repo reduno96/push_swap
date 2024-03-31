@@ -4,7 +4,11 @@ SRC=push_swap.c \
 	ft_free_utils.c \
 	ft_nodes_utlis.c\
 	ft_error.c \
-	ft_rules_utils.c \
+	ft_swap_rules.c \
+	ft_push_rules.c \
+	ft_rotate_rules.c \
+	ft_reverse_rotate_rules.c \
+
 
 
 OBJS=${SRC:.c=.o}
