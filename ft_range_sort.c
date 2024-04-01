@@ -6,12 +6,11 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 03:27:29 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/01 03:30:39 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/01 03:37:44 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 void	ft_babel_sort(int *array, int len)
 {
