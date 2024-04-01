@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 13:25:00 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/01 03:31:53 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,28 +27,8 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		add_nums_to_stack(&stack_a, argc, argv);
-		printf("swap_________________________\n");
-		ft_swap(&stack_a);
-		ft_iter_node(stack_a, ft_print_int);
-		
-		printf("swap_________________________\n");
-		ft_swap(&stack_a);
-		ft_iter_node(stack_a, ft_print_int);
-		
-		printf("push_to_b_________________________\n");
-		ft_push(&stack_b, &stack_a);
-		ft_push(&stack_b, &stack_a);
-		ft_iter_node(stack_a, ft_print_int);
-
-		printf("rotate_________________________\n");
-		ft_rotate(&stack_a);
-		ft_iter_node(stack_a, ft_print_int);
-
-		// ft_reverse_rotate(&stack_a);
-		// // Print the content of stack_a
-		// ft_iter_node(stack_b, ft_print_int);
-
-		// Free stack_a after you're done using it
+		ft_sort(&stack_a, &stack_b);
 		ft_free_stack2(stack_a);
+		ft_free_stack2(stack_b);
 	}
 }
