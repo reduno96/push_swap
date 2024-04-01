@@ -65,6 +65,10 @@
     "tuple": "c",
     "type_traits": "c",
     "utility": "c",
-    "push_swap.h": "c"
+    "push_swap.h": "c",
+    "chrono": "c",
+    "random": "c",
+    "limits": "c",
+    "algorithm": "c"
   }
 }

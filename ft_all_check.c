@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_all_check.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:20:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/26 21:31:54 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/31 22:41:41 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,15 @@ int	ft_toi(const char *str, t_stack *stack_a)
 int	ft_check_num(char *str)
 {
 	size_t	i;
-	size_t	j;
-	char	**strs;
 
-	strs = ft_split(str, ' ');
 	i = 0;
-	j = 0;
-	while (strs[i])
+	if (str[i] == '-')
+		i++;
+	while (str[i])
 	{
-		while (strs[i][j])
-		{
-			if (ft_isdigit(strs[i][j]) == 0)
-			{
-				return (ft_free_split(strs), 0);
-			}
-			j++;
-		}
+		if (!ft_isdigit(str[i]))
+			return (0);
 		i++;
 	}
-	i = 0;
-	return (ft_free_split(strs), 1);
+	return (1);
 }

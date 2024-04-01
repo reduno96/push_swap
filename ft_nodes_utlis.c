@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:18:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/24 17:23:20 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/31 16:00:56 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,19 @@ void	ft_add(t_stack **stack, t_stack *new_node)
 		last->next = new_node;
 		new_node->prev = last;
 	}
+}
+
+int	ft_stack_len(t_stack **stack_a)
+{
+	int		len;
+	t_stack	*tmp;
+
+	len = 0;
+	tmp = *stack_a;
+	while (tmp != NULL)
+	{
+		len++;
+		tmp = tmp->next;
+	}
+	return (len);
 }

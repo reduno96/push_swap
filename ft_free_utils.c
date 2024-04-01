@@ -6,13 +6,11 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:40:15 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/24 17:11:49 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/31 15:14:24 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
-
 
 void	ft_free_stack2(t_stack *stack)
 {
@@ -38,4 +36,3 @@ void	ft_free_split(char **str)
 	}
 	free(str);
 }
-

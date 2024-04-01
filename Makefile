@@ -8,6 +8,9 @@ SRC=push_swap.c \
 	ft_push_rules.c \
 	ft_rotate_rules.c \
 	ft_reverse_rotate_rules.c \
+	ft_sort.c \
+	ft_sort_utils.c \
+	ft_range_sort.c \
 
 
 

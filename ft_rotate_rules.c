@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:38:26 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 13:57:58 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/03/31 14:48:44 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ void	ft_rotate(t_stack **stack)
 void	ft_ra(t_stack **stack_a)
 {
 	ft_rotate(stack_a);
-	write(1, "ra", 2);
+	write(1, "ra\n", 3);
 }
 
 void	ft_rb(t_stack **stack_b)
 {
 	ft_rotate(stack_b);
-	write(1, "rb", 2);
+	write(1, "rb\n", 3);
 }
 
 void	ft_rr(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_rotate(stack_a);
 	ft_rotate(stack_b);
-	write(1, "rr", 2);
+	write(1, "rr\n", 3);
 }
