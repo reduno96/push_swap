@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 03:27:29 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/01 03:37:44 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/01 15:56:37 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,24 @@ int	ft_find_index(int *array, int len, int num)
 	return (-1);
 }
 
-void	ft_indexing(t_stack **stack_a, t_stack **stack_b)
+void	ft_indexing(t_stack *stack_a)
 {
 	int		len;
 	t_var	idx;
 	t_stack	*tmp;
 	int		*array;
 
-	(void)stack_b;
-	len = ft_stack_len(stack_a);
-	array = malloc(len * 4);
-	tmp = *stack_a;
+	len = ft_stack_len(&stack_a);
+	array = malloc(len * sizeof(int));
+	tmp = stack_a;
+	idx.i = 0;
 	while (idx.i < len)
 	{
 		array[idx.i++] = tmp->content;
 		tmp = tmp->next;
 	}
 	ft_babel_sort(array, len);
-	tmp = *stack_a;
+	tmp = stack_a;
 	while (tmp != NULL)
 	{
 		tmp->index = ft_find_index(array, len, tmp->content);

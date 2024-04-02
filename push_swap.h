@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/01 02:01:44 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/02 00:25:10 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,13 @@ void				ft_sort_2(t_stack **stack_a);
 void				ft_sort_3(t_stack **stack_a);
 void				ft_sort_4(t_stack **stack_a, t_stack **stack_b);
 void				ft_sort_5(t_stack **stack_a, t_stack **stack_b);
-void				ft_sort_range(t_stack **stack_a, t_stack **stack_b);
+void				ft_sort_range(t_stack **stack_a, t_stack **stack_b, int min,
+						int max);
 int					ft_stack_len(t_stack **stack_a);
 int					ft_find_max(t_stack **stack_a);
 int					ft_find_min(t_stack **stack_a);
+
+void				ft_indexing(t_stack *stack_a);
+void				ft_sort_final(t_stack **stack_a, t_stack **stack_b);
 
 #endif
