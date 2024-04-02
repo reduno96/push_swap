@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:37:54 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/02 04:00:36 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/02 22:22:21 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,35 +94,32 @@ void	ft_sort_5(t_stack **stack_a, t_stack **stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
+
 void	ft_sort_range(t_stack **stack_a, t_stack **stack_b, int min, int max)
 {
-	int	len;
+	ft_indexing(*stack_a);
+	// int len = ;
+	while ((*stack_a) != NULL)
+	{
+		if ((*stack_a)->index >= min && (*stack_a)->index <= max)
+		{
+			ft_pb(stack_b, stack_a);
+				min++;
+				max++;
+		}
+		else if ((*stack_a)->index < min)
+		{
+			ft_pb(stack_b, stack_a);
+			ft_rb(stack_b);
+				min++;
+				max++;
+		}
+		else
+		{
+			ft_ra(stack_a);
 
-	// t_var	idx;
-	(void)min;
-	(void)max;
-	len = ft_stack_len(stack_a);
-	// idx.i = 0;
-	// ft_indexing(*stack_a);
-	// // while (idx.i < len)
-	// // {
-	// // 	if ((*stack_a)->index >= min && (*stack_a)->index <= max)
-	// // 	{
-	// // 		ft_pb(stack_b, stack_a);
-	// // 		idx.i++;
-	// // 	}
-	// // 	else if ((*stack_a)->index < min)
-	// // 	{
-	// // 		ft_pb(stack_b, stack_a);
-	// // 		ft_rb(stack_b);
-	// // 		idx.i++;
-	// // 	}
-	// // 	else
-	// // 		ft_ra(stack_a);
-	// // 	min++;
-	// // 	max++;
-	// // }
-	while (len--)
-		ft_pb(stack_b, stack_a);
-	ft_sort_final(stack_a, stack_b);
+		}
+	}
+	 ft_sort_final(stack_a, stack_b);
 }
+
