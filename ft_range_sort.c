@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 03:27:29 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/01 15:56:37 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/03 03:21:11 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void	ft_indexing(t_stack *stack_a)
 
 	len = ft_stack_len(&stack_a);
 	array = malloc(len * sizeof(int));
+	if (!array)
+		return ;
 	tmp = stack_a;
 	idx.i = 0;
 	while (idx.i < len)
