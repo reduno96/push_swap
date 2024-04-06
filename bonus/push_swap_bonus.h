@@ -6,16 +6,17 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 01:50:55 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 03:01:56 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_BONUS_H
 # define PUSH_SWAP_BONUS_H
 
-# include "libft/libft.h"
-# include <stdio.h>
+# include "../get_next_line/get_next_line.h"
+# include "../libft/libft.h"
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_var
 {
@@ -40,8 +41,6 @@ int					ft_toi(const char *str, t_stack *stack_a);
 void				ft_free_stack2(t_stack *stack);
 void				ft_free_split(char **str);
 void				ft_error(t_stack *stack);
-
-void				ft_print_int(int n);
 
 void				ft_iter_node(t_stack *lst, void (*f)(int));
 t_stack				*ft_last_node(t_stack *stack);
@@ -81,6 +80,8 @@ int					ft_find_min(t_stack **stack_a);
 void				ft_indexing(t_stack *stack_a);
 void				ft_sort_final(t_stack **stack_a, t_stack **stack_b);
 int					ft_is_sorted(t_stack *stack);
-void				ft_check_stored(t_stack **stack_a, t_stack **stack_b,
-						char **read_line);
+void				ft_check_stored(t_stack **stack_a, t_stack **stack_b);
+
+int					ft_strcmp(const char *s1, const char *s2);
+
 #endif

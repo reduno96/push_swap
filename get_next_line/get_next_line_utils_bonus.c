@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:29:58 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/10 18:32:12 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:39:16 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_len(char *str)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ int	ft_check(char *line_check)
 	return (0);
 }
 
-void	*ft_calloc(size_t size)
+void	*ft_ex_calloc(size_t size)
 {
 	size_t	i;
 	char	*src;
@@ -55,7 +55,7 @@ void	*ft_calloc(size_t size)
 	return (src);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_join(char *s1, char *s2)
 {
 	char	*str_final;
 	int		i;
@@ -65,12 +65,12 @@ char	*ft_strjoin(char *s1, char *s2)
 	j = 0;
 	if (!s1)
 	{
-		s1 = ft_calloc(1);
+		s1 = ft_ex_calloc(1);
 		s1[0] = '\0';
 	}
 	if (!s2 || !s1)
 		return (NULL);
-	str_final = ft_calloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
+	str_final = ft_ex_calloc((ft_len(s1) + ft_len(s2)) + 1);
 	if (str_final == NULL)
 		return (NULL);
 	while (s1[j])

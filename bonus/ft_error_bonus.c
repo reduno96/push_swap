@@ -6,13 +6,13 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:13:04 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 01:49:09 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:45:21 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-void	ft_check_stored(t_stack **stack_a, t_stack **stack_b, char **read_line)
+void	ft_check_stored(t_stack **stack_a, t_stack **stack_b)
 {
 	if (ft_is_sorted(*stack_a) == 1 && *stack_b == NULL)
 		ft_putstr_fd("OK\n", 1);

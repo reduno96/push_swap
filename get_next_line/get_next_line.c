@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:30:16 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/10 16:30:19 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 03:05:11 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_hold_line(char *hold_line)
 		return (NULL);
 	while (hold_line[i] && hold_line[i] != '\n')
 		i++;
-	final_line = ft_calloc(i + 2);
+	final_line = ft_ex_calloc(i + 2);
 	if (!final_line)
 		return (free(final_line), NULL);
 	i = 0;
@@ -47,7 +47,7 @@ char	*ft_rest_buf(char *hold_line)
 		i++;
 	if (!hold_line[i])
 		return (free(hold_line), NULL);
-	str = ft_calloc((ft_strlen(hold_line) - i + 1));
+	str = ft_ex_calloc((ft_len(hold_line) - i + 1));
 	if (!str)
 		return (free(str), NULL);
 	i++;
@@ -82,13 +82,13 @@ char	*get_next_line(int fd)
 		return (NULL);
 	}
 	result_read = 1;
-	buf = ft_calloc(BUFFER_SIZE + 1);
+	buf = ft_ex_calloc(BUFFER_SIZE + 1);
 	if (!buf)
 		return (NULL);
 	while (ft_check(hold_line) == 0 && result_read > 0)
 	{
 		result_read = ft_read(buf, fd, &result_read);
-		hold_line = ft_strjoin(hold_line, buf);
+		hold_line = ft_join(hold_line, buf);
 	}
 	free(buf);
 	final_line = ft_hold_line(hold_line);

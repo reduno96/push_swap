@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_nums_to_stack.c                                :+:      :+:    :+:   */
+/*   add_nums_to_stack_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:10:03 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 18:39:37 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:15:21 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	add_nums_to_stack(t_stack **stack_a, int argc, char **argv)
 {

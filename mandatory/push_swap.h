@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/03 02:45:41 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:18:18 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 delete
  */
 
-# include "libft/libft.h"
-# include <stdio.h>
+# include "../libft/libft.h"
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_var
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse_rotate_rules.c                          :+:      :+:    :+:   */
+/*   ft_reverse_rotate_rules_bonus.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:45:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 16:42:45 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:15:54 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	ft_reverse_rotate(t_stack **stack_a)
 {

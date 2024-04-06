@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_all_check.c                                     :+:      :+:    :+:   */
+/*   ft_all_check_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:20:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 22:41:41 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:20:18 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	ft_check_duplicate(t_stack *stack_a)
 {
@@ -74,4 +74,14 @@ int	ft_check_num(char *str)
 		i++;
 	}
 	return (1);
+}
+
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

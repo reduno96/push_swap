@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nodes_utlis.c                                   :+:      :+:    :+:   */
+/*   ft_nodes_utlis_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:18:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/02 19:40:18 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:15:44 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	ft_iter_node(t_stack *lst, void (*f)(int))
 {

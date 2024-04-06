@@ -69,6 +69,7 @@
     "chrono": "c",
     "random": "c",
     "limits": "c",
-    "algorithm": "c"
+    "algorithm": "c",
+    "get_next_line.h": "c"
   }
 }

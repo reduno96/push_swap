@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:29:47 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 01:54:40 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:39:19 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
-char	*ft_strjoin(char *s1, char *s2);
-size_t	ft_strlen(char *str);
-void	*ft_calloc(size_t size);
+char	*ft_join(char *s1, char *s2);
+size_t	ft_len(char *str);
+void	*ft_ex_calloc(size_t size);
 int		ft_check(char *line_check);
 #endif

@@ -6,11 +6,11 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 01:51:34 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 02:43:47 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	ft_check_instruction(char *read_line)
 {
@@ -24,7 +24,7 @@ int	ft_check_instruction(char *read_line)
 	return (0);
 }
 
-void	ft_validate_one(t_stack *stack_a, t_stack *stack_b, char *read_line)
+void	ft_validate_one(t_stack **stack_a, t_stack **stack_b, char *read_line)
 {
 	if (!ft_strcmp(read_line, "sa\n"))
 		ft_swap(stack_a);
@@ -41,7 +41,7 @@ void	ft_validate_one(t_stack *stack_a, t_stack *stack_b, char *read_line)
 		ft_push(stack_b, stack_a);
 }
 
-void	ft_validate_two(t_stack *stack_a, t_stack *stack_b, char *read_line)
+void	ft_validate_two(t_stack **stack_a, t_stack **stack_b, char *read_line)
 {
 	if (!ft_strcmp(read_line, "ra\n"))
 		ft_rotate(stack_a);
@@ -63,8 +63,10 @@ void	ft_validate_two(t_stack *stack_a, t_stack *stack_b, char *read_line)
 	}
 }
 
-void	ft_read_stack(t_stack *stack_a, t_stack *stack_b, char *read_line)
+void	ft_read_stack(t_stack **stack_a, t_stack **stack_b)
 {
+	char	*read_line;
+
 	read_line = get_next_line(0);
 	while (read_line)
 	{
@@ -81,16 +83,14 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	char	*read_line;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	read_line = NULL;
 	if (argc > 1)
 	{
 		add_nums_to_stack(&stack_a, argc, argv);
 		ft_sort(&stack_a, &stack_b);
-		ft_read_stack(stack_a, stack_b, read_line);
+		ft_read_stack(&stack_a, &stack_b);
 		if (ft_is_sorted(stack_a) == 1 && stack_b == NULL)
 		{
 			ft_free_stack2(stack_a);
