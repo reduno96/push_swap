@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:43:47 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 05:41:22 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,17 @@ void	ft_read_stack(t_stack **stack_a, t_stack **stack_b)
 			ft_validate_one(stack_a, stack_b, read_line);
 			ft_validate_two(stack_a, stack_b, read_line);
 		}
+		else
+		{
+			free(read_line);
+			ft_free_stack2(*stack_a);
+			ft_free_stack2(*stack_b);
+			ft_putstr_fd("Error\n", 1);
+			exit(0);
+		}
+		free(read_line);
+		read_line = get_next_line(0);
 	}
-	free(read_line);
 }
 
 int	main(int argc, char **argv)
@@ -89,7 +98,6 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		add_nums_to_stack(&stack_a, argc, argv);
-		ft_sort(&stack_a, &stack_b);
 		ft_read_stack(&stack_a, &stack_b);
 		if (ft_is_sorted(stack_a) == 1 && stack_b == NULL)
 		{

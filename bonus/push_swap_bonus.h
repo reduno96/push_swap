@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 03:01:56 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 03:56:23 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../get_next_line/get_next_line.h"
 # include "../libft/libft.h"
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -82,6 +83,6 @@ void				ft_sort_final(t_stack **stack_a, t_stack **stack_b);
 int					ft_is_sorted(t_stack *stack);
 void				ft_check_stored(t_stack **stack_a, t_stack **stack_b);
 
-int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strcmp(char *s1, char *s2);
 
 #endif

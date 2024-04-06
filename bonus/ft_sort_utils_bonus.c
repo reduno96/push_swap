@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:37:54 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:16:08 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 03:29:19 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_find_min(t_stack **stack_a)
 void	ft_sort_2(t_stack **stack_a)
 {
 	if ((*stack_a)->content > (*stack_a)->next->content)
-		ft_sa(stack_a);
+		ft_swap(stack_a);
 }
 
 void	ft_sort_3(t_stack **stack_a)
@@ -44,20 +44,20 @@ void	ft_sort_3(t_stack **stack_a)
 	b = (*stack_a)->next->content;
 	c = (*stack_a)->next->next->content;
 	if (a > b && a < c)
-		ft_sa(stack_a);
+		ft_swap(stack_a);
 	else if (a > b && a > c && b > c)
 	{
-		ft_sa(stack_a);
-		ft_rra(stack_a);
+		ft_swap(stack_a);
+		ft_reverse_rotate(stack_a);
 	}
 	else if (a > b && a > c && b < c)
-		ft_ra(stack_a);
+		ft_rotate(stack_a);
 	else if (a < b && a > c)
-		ft_rra(stack_a);
+		ft_reverse_rotate(stack_a);
 	else if (a < b && a < c && b > c)
 	{
-		ft_sa(stack_a);
-		ft_ra(stack_a);
+		ft_swap(stack_a);
+		ft_rotate(stack_a);
 	}
 }
 
@@ -74,14 +74,14 @@ void	ft_sort_4(t_stack **stack_a, t_stack **stack_b)
 	{
 		if ((*stack_a)->content == min)
 		{
-			ft_pb(stack_b, stack_a);
+			ft_push(stack_b, stack_a);
 			break ;
 		}
-		ft_ra(stack_a);
+		ft_rotate(stack_a);
 		i++;
 	}
 	ft_sort_3(stack_a);
-	ft_pa(stack_a, stack_b);
+	ft_push(stack_a, stack_b);
 }
 
 void	ft_sort_5(t_stack **stack_a, t_stack **stack_b)
@@ -97,12 +97,12 @@ void	ft_sort_5(t_stack **stack_a, t_stack **stack_b)
 	{
 		if ((*stack_a)->content == min)
 		{
-			ft_pb(stack_b, stack_a);
+			ft_push(stack_b, stack_a);
 			break ;
 		}
-		ft_ra(stack_a);
+		ft_rotate(stack_a);
 		i++;
 	}
 	ft_sort_4(stack_a, stack_b);
-	ft_pa(stack_a, stack_b);
+	ft_push(stack_a, stack_b);
 }

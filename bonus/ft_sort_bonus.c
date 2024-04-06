@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 17:15:53 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:16:02 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 03:30:10 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,19 +64,19 @@ void	ft_sort_range(t_stack **stack_a, t_stack **stack_b, int min, int max)
 	{
 		if ((*stack_a)->index >= min && (*stack_a)->index <= max)
 		{
-			ft_pb(stack_b, stack_a);
+			ft_push(stack_b, stack_a);
 			min++;
 			max++;
 		}
 		else if ((*stack_a)->index < min)
 		{
-			ft_pb(stack_b, stack_a);
-			ft_rb(stack_b);
+			ft_push(stack_b, stack_a);
+			ft_rotate(stack_b);
 			min++;
 			max++;
 		}
 		else
-			ft_ra(stack_a);
+			ft_rotate(stack_a);
 	}
 	ft_sort_final(stack_a, stack_b);
 }
@@ -88,10 +88,10 @@ void	ft_sort_final(t_stack **stack_a, t_stack **stack_b)
 		if (ft_middle(*stack_b, ft_stack_len(stack_b) / 2, ft_stack_len(stack_b)
 				- 1))
 			while ((*stack_b)->index != ft_stack_len(stack_b) - 1)
-				ft_rb(stack_b);
+				ft_rotate(stack_b);
 		else
 			while ((*stack_b)->index != ft_stack_len(stack_b) - 1)
-				ft_rrb(stack_b);
-		ft_pa(stack_a, stack_b);
+				ft_reverse_rotate(stack_b);
+		ft_push(stack_a, stack_b);
 	}
 }

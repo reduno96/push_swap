@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:18:18 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/06 03:49:16 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ int					ft_toi(const char *str, t_stack *stack_a);
 void				ft_free_stack2(t_stack *stack);
 void				ft_free_split(char **str);
 void				ft_error(t_stack *stack);
-
-void				ft_print_int(int n);
 
 void				ft_iter_node(t_stack *lst, void (*f)(int));
 t_stack				*ft_last_node(t_stack *stack);
