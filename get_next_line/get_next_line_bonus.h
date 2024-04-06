@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/03 02:44:42 by rel-mora         ###   ########.fr       */
+/*   Created: 2024/03/10 16:29:47 by rel-mora          #+#    #+#             */
+/*   Updated: 2024/04/06 01:54:40 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 
-int	main(int argc, char **argv)
-{
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+# include <stdlib.h>
+# include <unistd.h>
 
-	stack_a = NULL;
-	stack_b = NULL;
-	if (argc > 1)
-	{
-		add_nums_to_stack(&stack_a, argc, argv);
-		if (ft_is_sorted(stack_a) == 0)
-			ft_sort(&stack_a, &stack_b);
-		ft_free_stack2(stack_a);
-		ft_free_stack2(stack_b);
-	}
-}
+char	*get_next_line(int fd);
+char	*ft_strjoin(char *s1, char *s2);
+size_t	ft_strlen(char *str);
+void	*ft_calloc(size_t size);
+int		ft_check(char *line_check);
+#endif
