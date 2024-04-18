@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 03:56:23 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/18 18:49:57 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "../get_next_line/get_next_line.h"
 # include "../libft/libft.h"
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

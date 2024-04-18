@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:37:54 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/03 02:42:37 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:14:37 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,10 @@ void	ft_sort_4(t_stack **stack_a, t_stack **stack_b)
 			ft_pb(stack_b, stack_a);
 			break ;
 		}
-		ft_ra(stack_a);
+		if ((*stack_a)->next != NULL)
+			ft_rra(stack_a);
+		else
+			ft_ra(stack_a);
 		i++;
 	}
 	ft_sort_3(stack_a);
@@ -100,7 +103,10 @@ void	ft_sort_5(t_stack **stack_a, t_stack **stack_b)
 			ft_pb(stack_b, stack_a);
 			break ;
 		}
-		ft_ra(stack_a);
+		if ((*stack_a)->next != NULL)
+			ft_rra(stack_a);
+		else
+			ft_ra(stack_a);
 		i++;
 	}
 	ft_sort_4(stack_a, stack_b);

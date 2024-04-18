@@ -3,21 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 03:49:16 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/18 18:50:45 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
-# include <stdio.h>
-
 /*
 delete
- */
+*/
 
 # include "../libft/libft.h"
 # include <stdlib.h>

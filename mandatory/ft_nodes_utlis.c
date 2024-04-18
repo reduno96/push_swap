@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:18:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/02 19:40:18 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:37:24 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,7 @@ void	ft_add(t_stack **stack, t_stack *new_node)
 	if (!stack || !new_node)
 		return ;
 	if (*stack == NULL)
-	{
 		*stack = new_node;
-	}
 	else
 	{
 		last = ft_last_node(*stack);
