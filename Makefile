@@ -52,7 +52,7 @@ ${CHECKER}: ${OBJSB} bonus/push_swap_bonus.h
 	${CC} ${CFLAGS} ${OBJSB} ${LIBFT} -o ${CHECKER}
 
 ${LIBFT}:
-	make -C libft
+	@make -C libft
 
 bonus: ${LIBFT} ${OBJSB} ${CHECKER}
 

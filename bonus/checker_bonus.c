@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 21:39:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/18 18:57:40 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/21 13:00:43 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_read_stack(t_stack **stack_a, t_stack **stack_b)
 			free(read_line);
 			ft_free_stack2(*stack_a);
 			ft_free_stack2(*stack_b);
-			ft_putstr_fd("Error\n", 1);
+			ft_putstr_fd("Error\n", 2);
 			exit(0);
 		}
 		free(read_line);
@@ -99,7 +99,7 @@ int	main(int argc, char **argv)
 	{
 		add_nums_to_stack(&stack_a, argc, argv);
 		ft_read_stack(&stack_a, &stack_b);
-		if (ft_is_sorted(stack_a) == 1 && stack_b == NULL)
+		if (stack_a != NULL && ft_is_sorted(stack_a) == 1 && stack_b == NULL)
 		{
 			ft_free_stack2(stack_a);
 			ft_free_stack2(stack_b);

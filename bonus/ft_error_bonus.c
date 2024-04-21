@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:13:04 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:45:21 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/21 13:01:13 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	ft_error(t_stack *stack_a)
 	ft_free_stack(&stack_a);
 	stack_a = NULL;
 	ft_putendl_fd("Error", 2);
-	exit(0);
+	exit(1);
 }

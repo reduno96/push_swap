@@ -23,10 +23,11 @@ CFLAGS = -Wall -Wextra -Werror
 all: ${NAME}
 
 %.o : %.c libft.h
-	${CC} ${CFLAGS} -c $< 
+	@${CC} ${CFLAGS} -c $<
 
 ${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
+	@${LIBC} ${NAME} ${OBJS}
+	@echo "Libft is ready"
 
 bonus: ${OBJS_BONUS}
 	${LIBC} ${NAME} ${OBJS_BONUS}
