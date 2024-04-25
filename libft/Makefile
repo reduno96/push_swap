@@ -17,7 +17,7 @@ OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 NAME = libft.a
 LIBC = ar rcs
 CC = cc
-RM = rm -f
+RM = rm -rf
 CFLAGS = -Wall -Wextra -Werror
 
 all: ${NAME}

@@ -12,56 +12,49 @@ SRCM=./mandatory/push_swap.c \
 	./mandatory/ft_sort_utils.c \
 	./mandatory/ft_range_sort.c \
 
-SRCB=./bonus/checker_bonus.c \
-	./bonus/add_nums_to_stack_bonus.c \
-	./bonus/ft_all_check_bonus.c\
-	./bonus/ft_free_utils_bonus.c \
-	./bonus/ft_nodes_utlis_bonus.c\
-	./bonus/ft_error_bonus.c \
-	./bonus/ft_swap_rules_bonus.c \
-	./bonus/ft_push_rules_bonus.c \
-	./bonus/ft_rotate_rules_bonus.c \
-	./bonus/ft_reverse_rotate_rules_bonus.c \
-	./bonus/ft_sort_bonus.c \
-	./bonus/ft_sort_utils_bonus.c \
-	./bonus/ft_range_sort_bonus.c \
-	./get_next_line/get_next_line.c \
-	./get_next_line/get_next_line_utils.c \
-
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
 
 NAME = push_swap
-CHECKER = checker
 
 OBJSM=${SRCM:.c=.o}
-OBJSB=${SRCB:.c=.o}
-
 
 LIBFT = ./libft/libft.a
+
+BONUSS = ./bonus/checker
+
+FLBONUS = ./bonus
+FLLIBFT = ./libft
 
 RM=rm -rf
 ARCH= ar -rcs
 
 all: ${LIBFT} ${OBJSM} ${NAME}
 
+${BONUSS}:
+	@make -C ${FLBONUS}
+
+bonus: ${BONUSS}
+
 ${NAME}: ${OBJSM} mandatory/push_swap.h
 	${CC} ${CFLAGS} ${OBJSM} ${LIBFT} -o ${NAME}
 
-${CHECKER}: ${OBJSB} bonus/push_swap_bonus.h
-	${CC} ${CFLAGS} ${OBJSB} ${LIBFT} -o ${CHECKER}
+%.o: %.c mandatory/push_swap.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 ${LIBFT}:
-	@make -C libft
+	@make -C ${FLLIBFT}
 
-bonus: ${LIBFT} ${OBJSB} ${CHECKER}
+
 
 clean:
-	make fclean -C libft
-	${RM} ${OBJSM} ${OBJSB}
+	make fclean -C ${FLLIBFT}
+	make clean -C ${FLBONUS}
+	${RM} ${OBJSM}
 
 fclean: clean
-	${RM} ${NAME} ${CHECKER} ${OBJSM} ${OBJSB}
+	${RM} ${NAME}
+	make fclean -C ${FLBONUS}
 
 re: fclean all
 
