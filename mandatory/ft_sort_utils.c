@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:37:54 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/18 19:14:37 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:38:41 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,28 +87,55 @@ void	ft_sort_4(t_stack **stack_a, t_stack **stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
-void	ft_sort_5(t_stack **stack_a, t_stack **stack_b)
+void	ii(t_stack *a)
 {
-	int	len;
 	int	i;
-	int	min;
 
-	len = ft_stack_len(stack_a);
 	i = 0;
-	min = ft_find_min(stack_a);
-	while (i < len)
+	while (a)
 	{
-		if ((*stack_a)->content == min)
-		{
-			ft_pb(stack_b, stack_a);
-			break ;
-		}
-		if ((*stack_a)->next != NULL)
-			ft_rra(stack_a);
-		else
-			ft_ra(stack_a);
+		a->index = i;
+		a = a->next;
 		i++;
 	}
-	ft_sort_4(stack_a, stack_b);
-	ft_pa(stack_a, stack_b);
+}
+int	find_index_by_value(t_stack *stack, int value)
+{
+	t_stack *current = stack;
+    int pos = 0;
+
+    while (current != NULL)
+    {
+        if (current->content == value)
+            return pos;
+        current = current->next;
+        pos++;
+    }
+
+    return -1;
+}
+
+void	ft_sort_5(t_stack **stack_a, t_stack **stack_b)
+{
+    int	len;
+    int	min;
+    int	min_pos;
+
+    len = ft_stack_len(stack_a);
+    min = ft_find_min(stack_a);
+	ft_indexing(*stack_a);
+    min_pos = find_index_by_value(*stack_a, min);
+    if (min_pos > len / 2)
+    {
+        while ((*stack_a)->content != min)
+            ft_rra(stack_a);
+    }
+    else
+    {
+        while ((*stack_a)->content != min)
+            ft_ra(stack_a);
+    }
+    ft_pb(stack_b, stack_a);
+    ft_sort_4(stack_a, stack_b);
+    ft_pa(stack_a, stack_b);
 }
