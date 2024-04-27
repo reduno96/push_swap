@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rotate_rules.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:38:26 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 14:48:44 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/26 19:44:36 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_rotate(t_stack **stack)
 	t_stack	*first;
 	t_stack	*last;
 
-	if (!(*stack) || !(*stack)->next)
-		return ;
 	first = *stack;
 	last = ft_last_node(*stack);
 	*stack = first->next;
