@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_reverse_rotate_rules.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:45:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/03/31 16:42:45 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/26 19:46:06 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_reverse_rotate(t_stack **stack_a)
 {
 	t_stack	*last;
 
-	if (*stack_a == NULL || (*stack_a)->next == NULL)
-		return ;
 	last = ft_last_node(*stack_a);
 	last->prev->next = NULL;
 	last->next = *stack_a;
