@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 03:27:29 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/03 03:21:11 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:45:10 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,23 @@ int	ft_find_index(int *array, int len, int num)
 		if (array[i] == num)
 			return (i);
 		i++;
+	}
+	return (-1);
+}
+
+int	find_index_by_value(t_stack *stack, int value)
+{
+	t_stack	*current;
+	int		pos;
+
+	current = stack;
+	pos = 0;
+	while (current != NULL)
+	{
+		if (current->content == value)
+			return (pos);
+		current = current->next;
+		pos++;
 	}
 	return (-1);
 }
