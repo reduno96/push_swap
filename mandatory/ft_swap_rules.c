@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:28:21 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/26 19:42:48 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/04/27 11:15:53 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ void	ft_swap(t_stack **stack_a)
 
 	fst = *stack_a;
 	scd = (*stack_a)->next;
+	if (scd->next != NULL)
+		scd->next->prev = fst;
 	fst->next = scd->next;
 	scd->next = fst;
+	fst->prev = scd;
+	scd->prev = NULL;
 	*stack_a = scd;
 }
 
