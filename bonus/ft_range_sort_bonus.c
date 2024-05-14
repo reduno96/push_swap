@@ -6,11 +6,28 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 03:27:29 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:15:51 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/13 15:09:44 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
+
+int	find_index_by_value(t_stack *stack, int value)
+{
+	t_stack	*current;
+	int		pos;
+
+	current = stack;
+	pos = 0;
+	while (current != NULL)
+	{
+		if (current->content == value)
+			return (pos);
+		current = current->next;
+		pos++;
+	}
+	return (-1);
+}
 
 void	ft_babel_sort(int *array, int len)
 {

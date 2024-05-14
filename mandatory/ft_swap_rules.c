@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap_rules.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:28:21 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/27 11:15:53 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:31:55 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 void	ft_swap(t_stack **stack_a)
 {
-	t_stack	*fst;
-	t_stack	*scd;
+	t_stack	*first;
+	t_stack	*second;
 
-	fst = *stack_a;
-	scd = (*stack_a)->next;
-	if (scd->next != NULL)
-		scd->next->prev = fst;
-	fst->next = scd->next;
-	scd->next = fst;
-	fst->prev = scd;
-	scd->prev = NULL;
-	*stack_a = scd;
+	first = *stack_a;
+	second = (*stack_a)->next;
+	first->next = second->next;
+	second->next = first;
+	first->prev = second;
+	second->prev = NULL;
+	*stack_a = second;
 }
 
 void	ft_sa(t_stack **stack_a)

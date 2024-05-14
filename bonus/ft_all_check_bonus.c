@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_all_check_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:20:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/21 12:35:14 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:52:10 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-int	ft_check_duplicate(t_stack *stack_a)
+void	ft_check_duplicate(t_stack *stack_a)
 {
 	t_stack	*node;
 	t_stack	*tmp;
@@ -29,7 +29,6 @@ int	ft_check_duplicate(t_stack *stack_a)
 		}
 		node = node->next;
 	}
-	return (1);
 }
 
 int	ft_toi(const char *str, t_stack *stack_a)

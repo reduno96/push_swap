@@ -6,7 +6,7 @@
 /*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:18:19 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/06 02:15:44 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:56:26 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_iter_node(t_stack *lst, void (*f)(int))
 {
 	t_stack	*node;
 
-	if (!lst || !f)
-		return ;
 	node = lst;
 	while (node != NULL)
 	{
@@ -44,8 +42,6 @@ t_stack	*ft_last_node(t_stack *stack)
 	t_stack	*last;
 
 	last = stack;
-	if (!stack)
-		return (NULL);
 	while (last->next != NULL)
 		last = last->next;
 	return (last);
@@ -55,12 +51,8 @@ void	ft_add(t_stack **stack, t_stack *new_node)
 {
 	t_stack	*last;
 
-	if (!stack || !new_node)
-		return ;
 	if (*stack == NULL)
-	{
 		*stack = new_node;
-	}
 	else
 	{
 		last = ft_last_node(*stack);

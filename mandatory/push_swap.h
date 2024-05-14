@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/26 15:45:34 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:48:37 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,11 @@ typedef struct s_stack
 
 void				add_nums_to_stack(t_stack **stack_a, int argc, char **argv);
 
-int					ft_check_duplicate(t_stack *stack_a);
+void				ft_check_duplicate(t_stack *stack_a);
 int					ft_check_num(char *str);
 int					ft_toi(const char *str, t_stack *stack_a);
 
 void				ft_free_stack2(t_stack *stack);
-void				ft_free_split(char **str);
 void				ft_error(t_stack *stack);
 
 void				ft_iter_node(t_stack *lst, void (*f)(int));

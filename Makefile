@@ -1,7 +1,6 @@
 SRCM=./mandatory/push_swap.c \
 	./mandatory/add_nums_to_stack.c \
 	./mandatory/ft_all_check.c\
-	./mandatory/ft_free_utils.c \
 	./mandatory/ft_nodes_utlis.c\
 	./mandatory/ft_error.c \
 	./mandatory/ft_swap_rules.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_nums_to_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:10:03 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/04/20 12:56:41 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:10:56 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,21 @@ void	add_nums_to_stack(t_stack **stack_a, int argc, char **argv)
 	char	**strs;
 
 	idx.i = 1;
-	if (argc > 1)
+	while (idx.i < argc)
 	{
-		while (idx.i < argc)
+		strs = ft_split(argv[idx.i++], ' ');
+		if (!*strs)
+			ft_error(*stack_a);
+		idx.j = 0;
+		while (strs[idx.j])
 		{
-			strs = ft_split(argv[idx.i++], ' ');
-			if (!*strs)
+			if (ft_check_num(strs[idx.j]) == 1)
+				ft_add(stack_a, ft_new(ft_toi(strs[idx.j], *stack_a)));
+			else
 				ft_error(*stack_a);
-			idx.j = 0;
-			while (strs[idx.j])
-			{
-				if (ft_check_num(strs[idx.j]) == 1)
-					ft_add(stack_a, ft_new(ft_toi(strs[idx.j], *stack_a)));
-				else
-					ft_error(*stack_a);
-				free(strs[idx.j++]);
-			}
-			free(strs);
+			free(strs[idx.j++]);
 		}
-		ft_check_duplicate(*stack_a);
+		free(strs);
 	}
+	ft_check_duplicate(*stack_a);
 }

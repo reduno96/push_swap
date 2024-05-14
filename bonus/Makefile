@@ -1,7 +1,6 @@
 SRCB=checker_bonus.c \
 	add_nums_to_stack_bonus.c \
 	ft_all_check_bonus.c\
-	ft_free_utils_bonus.c \
 	ft_nodes_utlis_bonus.c\
 	ft_error_bonus.c \
 	ft_swap_rules_bonus.c \
