@@ -44,8 +44,6 @@ ${NAME}: ${OBJSM} mandatory/push_swap.h
 ${LIBFT}:
 	@make -C ${FLLIBFT}
 
-
-
 clean:
 	make fclean -C ${FLLIBFT}
 	make clean -C ${FLBONUS}

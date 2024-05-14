@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_rules_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-mora <reduno96@gmail.com>              +#+  +:+       +#+        */
+/*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:32:42 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/13 15:18:38 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/14 12:15:22 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ void	ft_pb(t_stack **stack_b, t_stack **stack_a)
 	ft_push(stack_b, stack_a);
 	write(1, "pb\n", 3);
 }
-int
