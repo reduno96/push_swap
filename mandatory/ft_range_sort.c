@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 03:27:29 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:17:28 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/15 16:32:33 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_babel_sort(int *array, int len)
 {
 	int	i;
 	int	j;
-	int	temp;
+	int	tmp;
 
 	i = 0;
 	while (i < len)
@@ -26,9 +26,9 @@ void	ft_babel_sort(int *array, int len)
 		{
 			if (array[j] > array[j + 1])
 			{
-				temp = array[j];
+				tmp = array[j];
 				array[j] = array[j + 1];
-				array[j + 1] = temp;
+				array[j + 1] = tmp;
 			}
 			j++;
 		}
@@ -76,8 +76,6 @@ void	ft_indexing(t_stack *stack_a)
 
 	len = ft_stack_len(&stack_a);
 	array = malloc(len * sizeof(int));
-	if (!array)
-		return ;
 	tmp = stack_a;
 	idx.i = 0;
 	while (idx.i < len)

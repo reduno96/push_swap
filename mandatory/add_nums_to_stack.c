@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:10:03 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:17:06 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:29:33 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void	add_nums_to_stack(t_stack **stack_a, int argc, char **argv)
 		}
 		free(strs);
 	}
-	ft_check_duplicate(*stack_a);
+	ft_check_double(*stack_a);
 }

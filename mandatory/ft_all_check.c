@@ -6,13 +6,13 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:20:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:17:10 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:29:16 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_check_duplicate(t_stack *stack_a)
+void	ft_check_double(t_stack *stack_a)
 {
 	t_stack	*node;
 	t_stack	*tmp;
@@ -33,9 +33,9 @@ void	ft_check_duplicate(t_stack *stack_a)
 
 int	ft_toi(const char *str, t_stack *stack_a)
 {
-	int		i;
-	int		sign;
-	long	result;
+	int					i;
+	int					sign;
+	unsigned long long	result;
 
 	i = 0;
 	sign = 1;

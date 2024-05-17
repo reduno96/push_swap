@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:32:42 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:15:22 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/15 19:40:01 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 void	ft_push(t_stack **src, t_stack **dst)
 {
-	t_stack	*first;
+	t_stack	*fst_b;
 
-	first = *dst;
-	*dst = first->next;
-	first->prev = NULL;
-	first->next = *src;
-	*src = first;
+	if (*dst == NULL)
+		return ;
+	fst_b = *dst;
+	*dst = (*dst)->next;
+	if (*dst != NULL)
+		(*dst)->prev = NULL;
+	fst_b->prev = NULL;
+	fst_b->next = *src;
+	if (*src != NULL)
+		(*src)->prev = fst_b;
+	*src = fst_b;
 }
 
 void	ft_pa(t_stack **stack_a, t_stack **stack_b)

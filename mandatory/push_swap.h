@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:12:35 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:17:56 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:11:44 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_stack
 
 void				add_nums_to_stack(t_stack **stack_a, int argc, char **argv);
 
-void				ft_check_duplicate(t_stack *stack_a);
+void				ft_check_double(t_stack *stack_a);
 int					ft_check_num(char *str);
 int					ft_toi(const char *str, t_stack *stack_a);
 

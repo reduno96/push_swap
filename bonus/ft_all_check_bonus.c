@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:20:51 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:15:03 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/15 19:40:34 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	ft_check_duplicate(t_stack *stack_a)
 
 int	ft_toi(const char *str, t_stack *stack_a)
 {
-	int		i;
-	int		sign;
-	long	result;
+	int					i;
+	int					sign;
+	unsigned long long	result;
 
 	i = 0;
 	sign = 1;

@@ -6,7 +6,7 @@
 /*   By: rel-mora <rel-mora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 13:32:42 by rel-mora          #+#    #+#             */
-/*   Updated: 2024/05/14 12:17:23 by rel-mora         ###   ########.fr       */
+/*   Updated: 2024/05/17 15:14:35 by rel-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,16 @@ void	ft_push(t_stack **src, t_stack **dst)
 {
 	t_stack	*first;
 
+	if (*dst == NULL)
+		return ;
 	first = *dst;
-	*dst = first->next;
+	*dst = (*dst)->next;
+	if (*dst != NULL)
+		(*dst)->prev = NULL;
 	first->prev = NULL;
 	first->next = *src;
+	if (*src != NULL)
+		(*src)->prev = first;
 	*src = first;
 }
 

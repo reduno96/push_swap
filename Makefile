@@ -35,11 +35,12 @@ ${BONUSS}:
 
 bonus: ${BONUSS}
 
-${NAME}: ${OBJSM} mandatory/push_swap.h
+%.o: %.c  mandatory/push_swap.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+${NAME}: $(OBJSM) mandatory/push_swap.h
 	${CC} ${CFLAGS} ${OBJSM} ${LIBFT} -o ${NAME}
 
-%.o: %.c mandatory/push_swap.h
-	$(CC) $(CFLAGS) -c $< -o $@
 
 ${LIBFT}:
 	@make -C ${FLLIBFT}
